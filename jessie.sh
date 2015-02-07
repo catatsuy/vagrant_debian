@@ -50,4 +50,4 @@ umount /media/VBoxGuestAdditions
 rmdir /media/VBoxGuestAdditions
 
 # Start the newly build driver
-/etc/init.d/vboxadd start
+service vboxadd start
