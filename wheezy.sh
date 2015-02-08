@@ -42,13 +42,7 @@ sed -e "/^[ \t]*deb[ \t-]/ s/[ \t]contrib//g" \
 mv /etc/apt/sources.list.new /etc/apt/sources.list
 
 # Install the VirtualBox guest additions
-wget http://download.virtualbox.org/virtualbox/${virtualbox_ver}/VBoxGuestAdditions_${virtualbox_ver}.iso
-mkdir /media/VBoxGuestAdditions
-mount -o loop,ro VBoxGuestAdditions_${virtualbox_ver}.iso /media/VBoxGuestAdditions
-sh /media/VBoxGuestAdditions/VBoxLinuxAdditions.run
-rm VBoxGuestAdditions_${virtualbox_ver}.iso
-umount /media/VBoxGuestAdditions
-rmdir /media/VBoxGuestAdditions
+apt-get -y install virtualbox-guest-additions
 
 # Start the newly build driver
 service vboxadd start
