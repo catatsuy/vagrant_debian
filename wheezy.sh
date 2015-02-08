@@ -40,10 +40,8 @@ sed -e "/^[ \t]*deb[ \t-]/ s/[ \t]contrib//g" \
 mv /etc/apt/sources.list.new /etc/apt/sources.list
 
 # Install the VirtualBox guest additions
+apt-get update
 apt-get -y install virtualbox-guest-additions
-
-# Start the newly build driver
-service vboxadd start
 
 # delete the cache of apt
 rm -rf /var/cache/apt/archives/*
