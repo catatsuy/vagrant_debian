@@ -52,3 +52,7 @@ rmdir /media/VBoxGuestAdditions
 
 # Start the newly build driver
 service vboxadd start
+
+# delete the cache of apt
+rm -rf /var/cache/apt/archives/*
+rm -rf /var/lib/apt/lists/*
