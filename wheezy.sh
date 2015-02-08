@@ -1,7 +1,5 @@
 #!/bin/bash -xe
 
-virtualbox_ver=4.3.20
-
 apt-get -y install linux-headers-$(uname -r) build-essential
 apt-get -y install zlib1g-dev libssl-dev libreadline-gplv2-dev
 apt-get -y install sudo
