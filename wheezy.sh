@@ -35,9 +35,9 @@ chown -R vagrant:vagrant /home/vagrant/.ssh
 
 apt-get -y install nfs-common
 
-sed -e "/^[ \t]*deb[ \t-]/ s/[ \t]contrib//g"\
--e "/^[ \t]*deb[ \t-]/ s/[ \t]non-free//g"\
--e "/^[ \t]*deb[ \t-]/ s/[ \t]main/ main contrib non-free /g"\
+sed -e "/^[ \t]*deb[ \t-]/ s/[ \t]contrib//g" \
+-e "/^[ \t]*deb[ \t-]/ s/[ \t]non-free//g" \
+-e "/^[ \t]*deb[ \t-]/ s/[ \t]main/ main contrib non-free /g" \
 "/etc/apt/sources.list" > "/etc/apt/sources.list.new"
 mv /etc/apt/sources.list.new /etc/apt/sources.list
 
